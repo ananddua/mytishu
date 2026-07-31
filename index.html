@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#b6495d" />
+    <title>A Letter for You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Sacramento&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="love-music" preload="auto"></audio>
+    <main class="scene">
+      <div class="heart-burst" id="heart-burst" aria-hidden="true"></div>
+      <p class="eyebrow">A small note, made just for you</p>
+
+      <button class="envelope-button" id="envelope-button" type="button" aria-expanded="false" aria-label="Open your letter">
+        <span class="letter" aria-hidden="true">
+          <span class="letter-stamp">for you</span>
+          <span class="letter-rule"></span>
+          <span class="letter-greeting">My dearest,</span>
+          <span class="letter-copy">I wanted to leave you a little reminder of something I hope you never forget: life feels warmer, brighter, and more like home because you are in it.</span>
+          <span class="letter-copy">Thank you for the laughter that finds me on ordinary days, for the conversations that make time disappear, and for every small moment that somehow becomes a memory I want to keep.</span>
+          <span class="letter-copy">You have a way of making even the simplest things feel special. Your smile changes the whole mood of a room, and being close to you is one of my favorite places to be.</span>
+          <span class="letter-copy">No matter where life takes us, I will keep choosing you in the little ways and the big ones. I am so lucky that this story has you in it.</span>
+          <span class="letter-signoff">Always yours,</span>
+          <span class="letter-name">with all my love. Happy Girlfriends Day!</span>
+        </span>
+
+        <span class="envelope" aria-hidden="true">
+          <span class="envelope-back"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-front envelope-left"></span>
+          <span class="envelope-front envelope-right"></span>
+          <span class="envelope-front envelope-bottom"></span>
+          <span class="seal">&#9829;</span>
+        </span>
+      </button>
+
+      <p class="instruction" id="instruction">Tap the envelope to open</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
