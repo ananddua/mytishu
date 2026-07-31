@@ -1,7 +1,9 @@
 const envelopeButton = document.getElementById('envelope-button');
 const instruction = document.getElementById('instruction');
+const letter = document.getElementById('letter');
 const heartBurst = document.getElementById('heart-burst');
 const loveMusic = document.getElementById('love-music');
+const daysTogether = document.getElementById('days-together');
 const playlist = [
   'music/song-1.mp3',
 ];
@@ -9,10 +11,19 @@ let previousTrack = -1;
 let audioContext;
 let fallbackPlaying = false;
 
+function updateDaysTogether() {
+  const relationshipStart = new Date(2026, 0, 26);
+  const today = new Date();
+  const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const elapsedDays = Math.max(0, Math.floor((startOfToday - relationshipStart) / 86400000));
+  daysTogether.textContent = elapsedDays.toLocaleString();
+}
+
 function setLetterState(isOpen) {
   envelopeButton.classList.toggle('open', isOpen);
   envelopeButton.setAttribute('aria-expanded', String(isOpen));
   envelopeButton.setAttribute('aria-label', isOpen ? 'Close your letter' : 'Open your letter');
+  letter.setAttribute('aria-hidden', String(!isOpen));
   instruction.textContent = isOpen ? 'Tap the letter to tuck it away' : 'Tap the envelope to open';
   if (!isOpen) loveMusic.pause();
 }
@@ -89,6 +100,7 @@ function playOriginalMelody() {
 }
 
 loveMusic.addEventListener('error', playOriginalMelody);
+updateDaysTogether();
 
 envelopeButton.addEventListener('click', () => {
   if (envelopeButton.classList.contains('open')) {

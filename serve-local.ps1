@@ -17,6 +17,7 @@ while ($listener.IsListening) {
       '.css' { $context.Response.ContentType = 'text/css; charset=utf-8' }
       '.js' { $context.Response.ContentType = 'application/javascript; charset=utf-8' }
       '.mp3' { $context.Response.ContentType = 'audio/mpeg' }
+      '.png' { $context.Response.ContentType = 'image/png' }
     }
     $context.Response.OutputStream.Write($bytes, 0, $bytes.Length)
   } else {
