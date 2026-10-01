@@ -12,7 +12,7 @@ let audioContext;
 let fallbackPlaying = false;
 
 function updateDaysTogether() {
-  const relationshipStart = new Date(2026, 0, 26);
+  const relationshipStart = new Date(2026, 1, 26);
   const today = new Date();
   const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
   const elapsedDays = Math.max(0, Math.floor((startOfToday - relationshipStart) / 86400000));
